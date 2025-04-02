@@ -128,4 +128,134 @@
   .marvel-gradient {
     @apply bg-gradient-to-br from-marvel-red via-marvel-blue to-marvel-gold;
   }
+  
+  /* 3D Card Flip Effect */
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  /* Neon Effects */
+  .neon-pulse {
+    animation: neon-pulse 2s infinite alternate;
+  }
+  
+  .neon-pulse-bar {
+    animation: neon-pulse-bar 3s infinite alternate;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    animation: neon-glow 2s infinite alternate;
+  }
+  
+  .neon-glow-text {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  
+  .neon-spark {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    animation: neon-spark 1.5s infinite alternate;
+  }
+  
+  .neon-scan {
+    animation: neon-scan 3s infinite linear;
+  }
+  
+  .neon-scan-reverse {
+    animation: neon-scan 3s infinite linear reverse;
+  }
+  
+  /* Light Beams */
+  .light-beam-container {
+    overflow: hidden;
+  }
+  
+  .light-beam {
+    position: absolute;
+    width: 3px;
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+  }
+  
+  .light-beam-1 {
+    left: -50px;
+    top: -100px;
+    animation: light-beam-move 8s infinite linear;
+  }
+  
+  .light-beam-2 {
+    right: -50px;
+    top: -100px;
+    animation: light-beam-move 12s infinite linear reverse;
+  }
+}
+
+@keyframes neon-pulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes neon-pulse-bar {
+  0% {
+    box-shadow: 0 0 5px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+  }
+}
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+@keyframes neon-spark {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes neon-scan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes light-beam-move {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(45deg);
+  }
 }

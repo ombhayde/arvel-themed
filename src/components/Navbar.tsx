@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,13 +21,25 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          {["Home", "About", "Projects", "Skills", "Blog", "Contact"].map((item) => (
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Projects", path: "/projects" },
+            { name: "Skills", path: "/skills" },
+            { name: "Blog", path: "/blog" },
+            { name: "Contact", path: "/contact" }
+          ].map((item) => (
             <Link
-              key={item}
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="font-comic text-white hover:text-marvel-red transition-colors duration-200"
+              key={item.name}
+              to={item.path}
+              className={`font-comic hover:text-marvel-red transition-colors duration-200 relative ${
+                location.pathname === item.path ? 'text-marvel-red' : 'text-white'
+              }`}
             >
-              {item}
+              {item.name}
+              {location.pathname === item.path && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-marvel-red neon-pulse"></span>
+              )}
             </Link>
           ))}
         </div>
@@ -41,14 +54,23 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-marvel-black text-white px-4 py-5 animate-slide-in-left">
           <div className="flex flex-col space-y-4">
-            {["Home", "About", "Projects", "Skills", "Blog", "Contact"].map((item) => (
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Projects", path: "/projects" },
+              { name: "Skills", path: "/skills" },
+              { name: "Blog", path: "/blog" },
+              { name: "Contact", path: "/contact" }
+            ].map((item) => (
               <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="font-comic text-white hover:text-marvel-red transition-colors duration-200 py-2 px-4"
+                key={item.name}
+                to={item.path}
+                className={`font-comic hover:text-marvel-red transition-colors duration-200 py-2 px-4 ${
+                  location.pathname === item.path ? 'text-marvel-red bg-marvel-black/20' : 'text-white'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
-                {item}
+                {item.name}
               </Link>
             ))}
           </div>
