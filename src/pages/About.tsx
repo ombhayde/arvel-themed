@@ -2,7 +2,9 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Shield, Zap, Star, Sparkles } from 'lucide-react';
+import { Shield, Zap, Star, Sparkles, Image as ImageIcon } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About = () => {
   return (
@@ -30,6 +32,78 @@ const About = () => {
           </div>
           <div className="absolute bottom-20 right-10 text-marvel-blue/20 animate-float delay-150">
             <Zap size={80} strokeWidth={1} />
+          </div>
+        </section>
+        
+        {/* Hero Photo Section */}
+        <section className="py-16 bg-marvel-black text-white relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+              {/* Photo Frame */}
+              <div className="relative w-64 h-64 md:w-80 md:h-80 perspective">
+                <div className="absolute inset-0 bg-marvel-red transform rotate-6 rounded-lg shadow-lg z-0"></div>
+                <div className="absolute inset-0 bg-marvel-blue transform -rotate-3 rounded-lg shadow-lg z-10"></div>
+                <div className="relative w-full h-full z-20 transform hover:scale-105 transition-all duration-300">
+                  <div className="w-full h-full rounded-lg overflow-hidden comic-panel bg-white p-2 border-4 border-marvel-black">
+                    <AspectRatio ratio={1/1} className="relative">
+                      <div className="absolute inset-0 bg-comic-dot-pattern opacity-10"></div>
+                      <Avatar className="w-full h-full rounded-none">
+                        <AvatarImage 
+                          src="/placeholder.svg" 
+                          alt="Your Superhero Photo" 
+                          className="object-cover neon-glow"
+                        />
+                        <AvatarFallback className="bg-marvel-gold/20 w-full h-full flex items-center justify-center">
+                          <ImageIcon className="w-12 h-12 text-marvel-gold"/>
+                        </AvatarFallback>
+                      </Avatar>
+                    </AspectRatio>
+                  </div>
+                </div>
+                
+                {/* Comic Elements */}
+                <div className="absolute -top-6 -right-6 bg-marvel-gold text-marvel-black font-comic text-sm px-3 py-1 transform rotate-12 z-30 shadow-lg">
+                  CLASSIFIED
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-marvel-red text-white font-comic text-base px-3 py-1 transform -rotate-6 z-30 shadow-lg neon-glow">
+                  TOP SECRET
+                </div>
+              </div>
+              
+              {/* Hero Description */}
+              <div className="max-w-lg">
+                <h3 className="font-comic text-4xl mb-6 text-marvel-red neon-glow-text">THE CODING HERO</h3>
+                <div className="speech-bubble bg-white text-marvel-black p-5 relative">
+                  <p className="font-comic text-lg">
+                    Behind the digital mask lies a developer with extraordinary abilities to transform concepts into code! 
+                    When not saving the web from bugs and crashes, this hero studies the ancient arts of new frameworks and languages.
+                  </p>
+                </div>
+                
+                <div className="mt-8 comic-panel bg-marvel-blue/30 transform -rotate-1">
+                  <p className="font-marvel text-xl">
+                    "With great code comes great responsibility!"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Animated Stars */}
+          <div className="absolute inset-0">
+            {[...Array(30)].map((_, i) => (
+              <div 
+                key={i}
+                className="absolute rounded-full bg-white neon-spark"
+                style={{
+                  width: Math.random() * 3 + 1 + 'px',
+                  height: Math.random() * 3 + 1 + 'px',
+                  top: Math.random() * 100 + '%',
+                  left: Math.random() * 100 + '%',
+                  animationDelay: Math.random() * 5 + 's'
+                }}
+              ></div>
+            ))}
           </div>
         </section>
         
