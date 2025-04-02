@@ -61,11 +61,7 @@ const Index = () => {
       <Footer />
       
       {/* Additional CSS to hide Lovable badge */}
-      <style jsx="true">{`
-        a[href*="lovable.app"], a[href*="lovable.dev"] {
-          display: none !important;
-        }
-      `}</style>
+      
     </div>
   );
 };
