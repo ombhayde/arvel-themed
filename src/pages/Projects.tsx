@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Eye, Github, ExternalLink, Code, Cpu, Globe } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 type Project = {
   id: number;
@@ -19,80 +20,60 @@ type Project = {
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
+  const navigate = useNavigate();
+  
   
   // Project data
   const projects: Project[] = [
     {
       id: 1,
-      title: "INFINITY WEB",
-      description: "A responsive e-commerce platform with advanced filtering and real-time inventory management.",
-      image: "https://source.unsplash.com/random/800x600?ecommerce",
+      title: "Mahakumbh AI Stampede Detection",
+      description: "An AI-powered web application for real-time crowd analysis and early stampede detection using computer vision.",
+      image: "/images/maha.jpeg",
       demoLink: "#",
-      codeLink: "#",
-      technologies: ["React", "Node.js", "MongoDB", "Redux"],
-      category: "Web Dev",
-      details: "Built from scratch using the MERN stack, this project features user authentication, payment processing through Stripe, and a responsive admin dashboard. Implemented advanced state management using Redux and optimized performance for mobile devices."
+      codeLink: "https://github.com/ombhayde/Mahakumbh",
+      technologies: ["React", "TensorFlow.js", "OpenCV", "Flask"],
+      category: "AI",
+      details: "Utilizes AI-powered computer vision for crowd density estimation and real-time alert systems to prevent stampedes."
     },
     {
       id: 2,
-      title: "MIND STONE ANALYTICS",
-      description: "AI-powered data visualization dashboard for business metrics and performance tracking.",
-      image: "https://source.unsplash.com/random/800x600?dashboard",
+      title: "Wedease: The Wedding Portal",
+      description: "An all-in-one Indian wedding marketplace for booking venues, catering, and services with real-location features.",
+      image: "/images/wed.jpg",
       demoLink: "#",
-      codeLink: "#",
-      technologies: ["Python", "TensorFlow", "D3.js", "Flask"],
-      category: "AI",
-      details: "Using advanced machine learning algorithms to predict business trends and visualize complex data sets. Features include anomaly detection, custom report generation, and integration with popular data sources. The backend uses Flask with efficient data processing pipelines."
+      codeLink: "https://github.com/ombhayde/WedEase",
+      technologies: ["React", "Node.js", "Postgres", "Stripe", "Google Maps API"],
+      category: "Web Dev",
+      details: "Integrated real-time location services, vendor onboarding, and payment solutions for seamless wedding planning."
     },
     {
       id: 3,
-      title: "QUANTUM LEDGER",
-      description: "Decentralized application for transparent supply chain tracking and verification.",
-      image: "https://source.unsplash.com/random/800x600?blockchain",
+      title: "AI-Powered Farming Portal",
+      description: "A mobile AI-driven portal that diagnoses crop and livestock diseases, offering smart treatment advice.",
+      image: "/images/crop.png",
       demoLink: "#",
-      codeLink: "#",
-      technologies: ["Solidity", "Ethereum", "Web3.js", "React"],
-      category: "Blockchain",
-      details: "Built on Ethereum, this dApp provides immutable records of product journeys from manufacturer to consumer. Smart contracts ensure automatic payments and verification of goods. Features include QR code scanning for authenticity checks and a user-friendly tracking interface."
+      codeLink: "https://github.com/ombhayde/crop_disease_detection",
+      technologies: ["TensorFlow", "Python", "Flask", "Mobile AI Integration"],
+      category: "AI",
+      details: "Uses AI models to detect diseases in crops and livestock through image analysis and provides recommended treatments."
     },
     {
       id: 4,
-      title: "SUPERHERO CMS",
-      description: "Content management system with drag-and-drop interface and real-time collaboration.",
-      image: "https://source.unsplash.com/random/800x600?cms",
+      title: "DSurv: The Blockchain Sentinel",
+      description: "A crypto token transfer platform leveraging Internet Identity for authentication, featuring a faucet, transfer UI, and balance check.",
+      image: "/images/open.png",
       demoLink: "#",
-      codeLink: "#",
-      technologies: ["Vue.js", "GraphQL", "PostgreSQL", "Docker"],
-      category: "Web Dev",
-      details: "A modern CMS built with Vue.js and GraphQL, featuring real-time collaboration, version control, and a headless architecture. The system includes user roles, workflow management, and a powerful API for content delivery to multiple platforms."
-    },
-    {
-      id: 5,
-      title: "JARVIS ASSISTANT",
-      description: "Voice-controlled AI assistant for developer productivity and code generation.",
-      image: "https://source.unsplash.com/random/800x600?ai",
-      demoLink: "#",
-      codeLink: "#",
-      technologies: ["Python", "OpenAI", "FastAPI", "React"],
-      category: "AI",
-      details: "Inspired by Iron Man's JARVIS, this AI assistant helps developers write code, debug issues, and answer programming questions. Uses natural language processing to understand context and generate relevant code snippets across multiple programming languages."
-    },
-    {
-      id: 6,
-      title: "COSMIC CHAIN",
-      description: "NFT marketplace for digital art with creator royalties and auction functionality.",
-      image: "https://source.unsplash.com/random/800x600?nft",
-      demoLink: "#",
-      codeLink: "#",
-      technologies: ["React", "Solidity", "IPFS", "Ethers.js"],
+      codeLink: "https://www.linkedin.com/posts/om-bhayde-66a643253_blockchain-crypto-webdevelopment-activity-7224011700901994496-OUJ7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6Qk_IBavu7Kz4fsLor-DcA3GdwFPdI4Cg",
+      technologies: ["Motoko", "Internet Computer", "React", "Express", "MongoDB"],
       category: "Blockchain",
-      details: "A complete NFT marketplace supporting ERC-721 and ERC-1155 tokens with integrated wallet connection. Features include art auctions, creator royalties on secondary sales, and decentralized storage via IPFS for artwork files."
+      details: "Secure and decentralized crypto transactions using the Internet Computer blockchain, featuring an intuitive UI."
     }
-  ];
-  
-  const categories = ['All', 'Web Dev', 'AI', 'Blockchain'];
-  
-  const filteredProjects = activeFilter === 'All' 
+];
+
+const categories = ['All', 'Web Dev', 'AI', 'Blockchain'];
+
+const filteredProjects = activeFilter === 'All' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
     
@@ -101,6 +82,13 @@ const Projects = () => {
       setFlippedCard(null);
     } else {
       setFlippedCard(id);
+    }
+  };
+  const handleDemoClick = (demoLink: string) => {
+    if (demoLink === "#") {
+      navigate("/notfound"); // Redirect to NotFound.tsx
+    } else {
+      window.open(demoLink, "_blank", "noopener,noreferrer");
     }
   };
   
@@ -232,6 +220,10 @@ const Projects = () => {
                         <div className="flex justify-center gap-4 mt-auto">
                           <a 
                             href={project.demoLink} 
+                            onClick={(e) => {
+                              e.preventDefault(); // Prevent default anchor behavior
+                              handleDemoClick(project.demoLink);
+                            }} 
                             className="flex items-center gap-1 bg-marvel-blue px-3 py-2 rounded-md hover:bg-marvel-blue/80"
                             target="_blank" 
                             rel="noopener noreferrer"

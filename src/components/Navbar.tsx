@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-marvel-black/90 backdrop-blur-sm text-white shadow-lg">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-marvel-red font-marvel text-3xl tracking-wider transform -rotate-2">MARVEL</span>
+          <span className="text-marvel-red font-marvel text-3xl tracking-wider transform -rotate-2">OM's</span>
           <span className="text-white font-marvel text-xl ml-1">PORTFOLIO</span>
         </Link>
 

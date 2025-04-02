@@ -117,7 +117,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-comic text-marvel-red mb-1">Email</h4>
-                        <p className="text-marvel-silver">codeavenger@shield.com</p>
+                        <p className="text-marvel-silver">ombhayde5@gmail.com</p>
                       </div>
                     </div>
                     
@@ -127,7 +127,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-comic text-marvel-blue mb-1">Phone</h4>
-                        <p className="text-marvel-silver">+1 (123) 456-7890</p>
+                        <p className="text-marvel-silver">+91 7224974906</p>
                       </div>
                     </div>
                     
@@ -137,7 +137,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-comic text-marvel-gold mb-1">Location</h4>
-                        <p className="text-marvel-silver">Avengers Tower, New York</p>
+                        <p className="text-marvel-silver">MITS, Gwalior</p>
                       </div>
                     </div>
                   </div>
@@ -145,10 +145,10 @@ const Contact = () => {
                   <div className="mt-8 pt-6 border-t border-marvel-gray/30">
                     <h4 className="font-comic text-lg mb-4">FOLLOW THE MISSION</h4>
                     <div className="flex gap-4">
-                      <a href="#" className="p-3 bg-marvel-gray rounded-full hover:bg-marvel-red transition-colors">
+                      <a href="https://github.com/ombhayde" className="p-3 bg-marvel-gray rounded-full hover:bg-marvel-red transition-colors">
                         <Github size={20} className="text-white" />
                       </a>
-                      <a href="#" className="p-3 bg-marvel-gray rounded-full hover:bg-marvel-blue transition-colors">
+                      <a href="https://www.linkedin.com/in/om-bhayde-66a643253/" className="p-3 bg-marvel-gray rounded-full hover:bg-marvel-blue transition-colors">
                         <Linkedin size={20} className="text-white" />
                       </a>
                       <a href="#" className="p-3 bg-marvel-gray rounded-full hover:bg-marvel-gold transition-colors">
@@ -271,16 +271,16 @@ const Contact = () => {
             </div>
             
             <div className="comic-panel p-0 h-96 relative overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2155278150885!2d-73.98784532352496!3d40.74844613539341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c6b5%3A0x35b1cfbc89a6097f!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1655999525174!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location"
-              ></iframe>
+            <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.074338478797!2d78.20364007520927!3d26.23033046959335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c14c5bf87d03%3A0x74c8bf84f68768fa!2sCSE%20%26%20IT%20Department%20MITS!5e0!3m2!1sen!2sin!4v1712113245855!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="CSE & IT Department MITS Location"
+></iframe>
               
               {/* Comic Overlay Elements */}
               <div className="absolute top-4 left-4 comic-panel bg-marvel-red px-3 py-2 transform -rotate-6 z-10">

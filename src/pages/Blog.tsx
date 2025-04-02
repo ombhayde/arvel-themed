@@ -25,7 +25,7 @@ const Blog = () => {
       id: 1,
       title: "The Rise of Serverless Architecture",
       excerpt: "How serverless functions are changing the way we build applications and scale our services.",
-      cover: "https://source.unsplash.com/random/800x600?server",
+      cover: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/07/tony-stark-over-an-image-of-iron-man.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
       date: "May 15, 2023",
       author: "Tony Stark",
       readTime: "5 min",
@@ -36,7 +36,7 @@ const Blog = () => {
       id: 2,
       title: "Mastering React Hooks",
       excerpt: "A deep dive into React's most powerful feature and how to use them effectively in your projects.",
-      cover: "https://source.unsplash.com/random/800x600?code",
+      cover: "https://sm.ign.com/t/ign_it/screenshot/default/blob_94d4.2560.jpg",
       date: "April 22, 2023",
       author: "Peter Parker",
       readTime: "8 min",
@@ -47,7 +47,7 @@ const Blog = () => {
       id: 3,
       title: "The Future of AI in Web Development",
       excerpt: "Exploring how artificial intelligence is transforming the way we create and maintain web applications.",
-      cover: "https://source.unsplash.com/random/800x600?ai",
+      cover: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/hulk-and-bruce-banner.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
       date: "March 10, 2023",
       author: "Bruce Banner",
       readTime: "7 min",
@@ -58,7 +58,7 @@ const Blog = () => {
       id: 4,
       title: "Building Accessible Web Applications",
       excerpt: "Best practices for creating inclusive applications that everyone can use, regardless of ability.",
-      cover: "https://source.unsplash.com/random/800x600?accessibility",
+      cover: "https://static1.srcdn.com/wordpress/wp-content/uploads/2025/03/captain-america-relatives-nomad-and-james-rogers.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
       date: "February 5, 2023",
       author: "Steve Rogers",
       readTime: "6 min",
@@ -69,7 +69,7 @@ const Blog = () => {
       id: 5,
       title: "TypeScript: The Superhero JavaScript Needs",
       excerpt: "Why TypeScript has become an essential tool for modern web development and how to get started.",
-      cover: "https://source.unsplash.com/random/800x600?typescript",
+      cover: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/natasha-romanoff-s-black-widow-and-yelena-belova-in-the-mcu.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
       date: "January 18, 2023",
       author: "Natasha Romanoff",
       readTime: "9 min",
@@ -266,7 +266,7 @@ const Blog = () => {
                   
                   <div className="relative h-40 -mx-4 -mt-4 mb-4">
                     <img 
-                      src="https://source.unsplash.com/random/800x600?marvel" 
+                      src="https://cdn.britannica.com/60/182360-050-CD8878D6/Avengers-Age-of-Ultron-Joss-Whedon.jpg?w=300" 
                       alt="Featured Post" 
                       className="w-full h-full object-cover"
                     />

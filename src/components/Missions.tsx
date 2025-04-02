@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Code, Link, FileText } from 'lucide-react';
 
@@ -8,43 +7,52 @@ type Mission = {
   technologies: string[];
   image: string;
   link: string;
-  category: string;
+  categories: string[];  // Changed to an array to support multiple categories
 };
 
 const Missions = () => {
   const [activeFilter, setActiveFilter] = useState('All');
-  
+
   const missions: Mission[] = [
     {
-      title: "The Web Crawler",
-      description: "A responsive e-commerce website with user authentication and payment processing capabilities.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://source.unsplash.com/photo-1531297484001-80022131f5a1",
-      link: "#",
-      category: "Web Dev"
+      title: "Mahakumbh AI Stampede Detection",
+      description: "An AI-powered web application for real-time crowd analysis and early stampede detection using computer vision.",
+      technologies: ["React", "TensorFlow.js", "OpenCV", "Flask"],
+      image: "/images/maha.jpeg", 
+      link: "https://github.com/ombhayde/Mahakumbh",
+      categories: ["Web Dev", "AI"]  // Now belongs to both Web Dev and AI
     },
     {
-      title: "Mind Stone Analytics",
-      description: "Real-time data visualization dashboard for monitoring business metrics and performance indicators.",
-      technologies: ["Vue.js", "D3.js", "Firebase", "Google Analytics"],
-      image: "https://source.unsplash.com/photo-1605810230434-7631ac76ec81",
-      link: "#",
-      category: "AI"
+      title: "Wedease: The Wedding Portal",
+      description: "An all-in-one Indian wedding marketplace for booking venues, catering, and services with real-location features.",
+      technologies: ["React", "Node.js", "Postgres", "Stripe","Google Maps API"],
+      image: "/images/wed.jpg",
+      link: "https://github.com/ombhayde/WedEase",
+      categories: ["Web Dev"]
     },
     {
-      title: "Quantum Realm Explorer",
-      description: "Virtual reality application showcasing interactive 3D models of quantum physics concepts.",
-      technologies: ["Unity", "C#", "Oculus SDK", "WebXR"],
-      image: "https://source.unsplash.com/photo-1485827404703-89b55fcc595e",
-      link: "#",
-      category: "Blockchain"
+      title: "AI-Powered Farming Portal",
+      description: "A mobile AI-driven portal that diagnoses crop and livestock diseases, offering smart treatment advice.",
+      technologies: ["TensorFlow", "Python", "Flask", "Mobile AI Integration"],
+      image: "/images/crop.png",
+      link: "https://github.com/ombhayde/crop_disease_detection",
+      categories: ["AI"]
+    },
+    {
+      title: "DSurv: The Blockchain Sentinel",
+      description: "A crypto token transfer platform leveraging Internet Identity for authentication, featuring a faucet, transfer UI, and balance check.",
+      technologies: ["Motoko", "Internet Computer", "React", "Express","MongoDB"],
+      image: "/images/open.png",
+      link: "https://www.linkedin.com/posts/om-bhayde-66a643253_blockchain-crypto-webdevelopment-activity-7224011700901994496-OUJ7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6Qk_IBavu7Kz4fsLor-DcA3GdwFPdI4Cg",
+      categories: ["Blockchain"]
     }
   ];
 
   const categories = ['All', 'Web Dev', 'AI', 'Blockchain'];
+
   const filteredMissions = activeFilter === 'All' 
     ? missions 
-    : missions.filter(mission => mission.category === activeFilter);
+    : missions.filter(mission => mission.categories.includes(activeFilter));
 
   return (
     <section className="py-20 bg-white">
@@ -78,7 +86,7 @@ const Missions = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredMissions.map((mission, index) => (
+          {filteredMissions.map((mission) => (
             <div 
               key={mission.title}
               className="comic-panel group hover:scale-105 transition-transform duration-300 overflow-hidden"

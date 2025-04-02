@@ -49,7 +49,7 @@ const About = () => {
                       <div className="absolute inset-0 bg-comic-dot-pattern opacity-10"></div>
                       <Avatar className="w-full h-full rounded-none">
                         <AvatarImage 
-                          src="/placeholder.svg" 
+                          src="/images/om21.png" 
                           alt="Your Superhero Photo" 
                           className="object-cover neon-glow"
                         />
@@ -119,9 +119,9 @@ const About = () => {
                 {/* Content for right side */}
                 <div className="w-full md:w-1/2 pb-10 md:pr-10 md:text-right order-2 md:order-1">
                   <div className="comic-panel bg-marvel-gold/10 animate-slide-in-left">
-                    <span className="font-marvel text-lg bg-marvel-red text-white px-3 py-1 inline-block transform -rotate-2 mb-4">2010</span>
+                    <span className="font-marvel text-lg bg-marvel-red text-white px-3 py-1 inline-block transform -rotate-2 mb-4">2022</span>
                     <h3 className="font-comic text-2xl mb-3">THE AWAKENING</h3>
-                    <p>Our hero discovers coding during a high school project, creating a simple website that would change the course of their destiny forever.</p>
+                    <p>In my first year of college, I built my first website—a simple project that unknowingly set me on a path to discovering my passion for coding and transforming my future.</p>
                     <div className="neon-pulse mt-4 inline-block" style={{filter: "drop-shadow(0 0 8px #ED1D24)"}}>
                       <Sparkles size={24} className="text-marvel-red" />
                     </div>
@@ -143,7 +143,7 @@ const About = () => {
                 {/* Content for left side */}
                 <div className="w-full md:w-1/2 pb-10 md:pl-10 order-2">
                   <div className="comic-panel bg-marvel-blue/10 animate-slide-in-right">
-                    <span className="font-marvel text-lg bg-marvel-blue text-white px-3 py-1 inline-block transform -rotate-2 mb-4">2014</span>
+                    <span className="font-marvel text-lg bg-marvel-blue text-white px-3 py-1 inline-block transform -rotate-2 mb-4">2023</span>
                     <h3 className="font-comic text-2xl mb-3">THE TRAINING</h3>
                     <p>College years spent mastering the fundamentals of computer science, learning various programming languages, and building a foundation of knowledge.</p>
                     <div className="neon-pulse mt-4 inline-block" style={{filter: "drop-shadow(0 0 8px #518CCA)"}}>
@@ -161,9 +161,10 @@ const About = () => {
                 {/* Content for right side */}
                 <div className="w-full md:w-1/2 pb-10 md:pr-10 md:text-right order-2 md:order-1">
                   <div className="comic-panel bg-marvel-red/10 animate-slide-in-left">
-                    <span className="font-marvel text-lg bg-marvel-gold text-black px-3 py-1 inline-block transform -rotate-2 mb-4">2017</span>
+                    <span className="font-marvel text-lg bg-marvel-gold text-black px-3 py-1 inline-block transform -rotate-2 mb-4">2024</span>
                     <h3 className="font-comic text-2xl mb-3">FIRST MISSION</h3>
-                    <p>Joining a tech startup as a junior developer, our hero faces their first real-world challenges and learns to collaborate with other heroes.</p>
+                    <p>ChatGPT said:
+                    Receiving a stipend for developing a plugin for <b>Adobe</b>, our hero takes their first step into the real-world tech industry, overcoming challenges and collaborating with other innovators.</p>
                     <div className="neon-pulse mt-4 inline-block" style={{filter: "drop-shadow(0 0 8px #F0E6D2)"}}>
                       <Star size={24} className="text-marvel-gold" />
                     </div>

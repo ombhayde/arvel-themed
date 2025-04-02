@@ -11,11 +11,11 @@ type PowerMeter = {
 
 const Superpowers = () => {
   const powers: PowerMeter[] = [
-    { skill: "Web-Slinging (React)", level: 90, icon: <Code size={24} />, color: "bg-blue-500" },
-    { skill: "Shield Mastery (TypeScript)", level: 85, icon: <FileText size={24} />, color: "bg-marvel-blue" },
-    { skill: "Thunder Control (Node.js)", level: 80, icon: <Zap size={24} />, color: "bg-green-500" },
-    { skill: "Mind Reading (UX Design)", level: 75, icon: <User size={24} />, color: "bg-purple-500" },
-    { skill: "Iron Suit (Systems Architecture)", level: 70, icon: <Code size={24} />, color: "bg-marvel-red" },
+    { skill: "Web-Slinging (Full-Stack Development - MERN, PERN)", level: 90, icon: <Code size={24} />, color: "bg-blue-500" },
+    { skill: "Shield Mastery (DSA & Algorithm Optimisation)", level: 85, icon: <FileText size={24} />, color: "bg-marvel-blue" },
+    { skill: "Thunder Control (Blockchain & Cryptography)", level: 80, icon: <Zap size={24} />, color: "bg-green-500" },
+    { skill: "Mind Reading (UX & AI Integration)", level: 75, icon: <User size={24} />, color: "bg-purple-500" },
+    { skill: "Iron Suit (System & Web Security, Browser Exploitation Prevention)", level: 70, icon: <Code size={24} />, color: "bg-marvel-red" },
     { skill: "Time Control (Project Management)", level: 85, icon: <FileText size={24} />, color: "bg-yellow-500" },
   ];
 

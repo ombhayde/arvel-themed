@@ -16,7 +16,7 @@ const Hero = () => {
         {/* Marvel Logo */}
         <div className="absolute top-0 left-0 right-0 flex justify-center">
           <div className="bg-marvel-red px-10 py-2 transform -skew-x-12">
-            <h2 className="font-marvel text-white text-3xl tracking-wider">MARVEL</h2>
+            <h2 className="font-marvel text-white text-3xl tracking-wider">OM</h2>
           </div>
         </div>
 
@@ -40,10 +40,12 @@ const Hero = () => {
 
         {/* Call to Action */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-12">
-          <button className="comic-button bg-marvel-red text-xl font-comic">
+          <button className="comic-button bg-marvel-red text-xl font-comic"
+          onClick={() => window.open("https://github.com/ombhayde", "_blank")}>
             SEE MY WORK
           </button>
-          <button className="comic-button bg-marvel-blue text-xl font-comic">
+          <button className="comic-button bg-marvel-blue text-xl font-comic"
+          onClick={() => window.open("https://www.linkedin.com/in/om-bhayde-66a643253/", "_blank")}>
             HIRE ME
           </button>
         </div>

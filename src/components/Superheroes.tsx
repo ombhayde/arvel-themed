@@ -91,7 +91,7 @@ const Superheroes = () => {
             AVENGERS ASSEMBLE
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-marvel-red neon-pulse"></div>
           </h2>
-          <p className="mt-4 text-marvel-gold font-comic text-xl">Meet the team of superheroes ready to tackle your coding challenges!</p>
+          <p className="mt-4 text-marvel-gold font-comic text-xl">Every great developer has multiple superpowers—here are mine!</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -109,7 +109,7 @@ const Superheroes = () => {
               {/* Hero Info */}
               <div className="p-4 flex-grow">
                 <h3 className="font-marvel text-2xl text-white neon-glow-text">{hero.name}</h3>
-                <p className="text-gray-300 italic mb-2">Alias: {hero.alias}</p>
+                <p className="text-gray-300 italic mb-2">Power Mode: {hero.alias}</p>
                 <div className="speech-bubble bg-white/90 mt-3 transform -rotate-2">
                   <p className="font-comic text-sm">{hero.power}</p>
                 </div>
