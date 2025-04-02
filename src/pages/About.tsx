@@ -163,8 +163,7 @@ const About = () => {
                   <div className="comic-panel bg-marvel-red/10 animate-slide-in-left">
                     <span className="font-marvel text-lg bg-marvel-gold text-black px-3 py-1 inline-block transform -rotate-2 mb-4">2024</span>
                     <h3 className="font-comic text-2xl mb-3">FIRST MISSION</h3>
-                    <p>ChatGPT said:
-                    Receiving a stipend for developing a plugin for <b>Adobe</b>, our hero takes their first step into the real-world tech industry, overcoming challenges and collaborating with other innovators.</p>
+                    <p>Receiving a stipend for developing a plugin for <b>Adobe</b>, our hero takes their first step into the real-world tech industry, overcoming challenges and collaborating with other innovators.</p>
                     <div className="neon-pulse mt-4 inline-block" style={{filter: "drop-shadow(0 0 8px #F0E6D2)"}}>
                       <Star size={24} className="text-marvel-gold" />
                     </div>
