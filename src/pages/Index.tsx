@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import OriginStory from '@/components/OriginStory';
+import Superheroes from '@/components/Superheroes';
 import Superpowers from '@/components/Superpowers';
 import Missions from '@/components/Missions';
 import Contact from '@/components/Contact';
@@ -17,6 +18,7 @@ const Index = () => {
       <main>
         <Hero />
         <OriginStory />
+        <Superheroes />
         <Superpowers />
         <Missions />
         <Contact />
